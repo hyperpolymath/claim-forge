@@ -1,0 +1,81 @@
+# Claim Forge - Git Ignore File
+
+# Ada build artifacts
+obj/
+bin/claim-forge
+*.o
+*.ali
+*.a
+*.so
+b~*.ad[sb]
+b__*.ad[sb]
+
+# GNAT project build files
+*.lexch
+*.cswi
+
+# Backup files
+*.bak
+*~
+.#*
+\#*#
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+/var/log/
+
+# Test artifacts
+test-*.md
+*.ots.bak
+CLAIM.md.test
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# GPG files (never commit these!)
+*.gpg
+*.asc
+gpg-*-backup.*
+
+# Git files
+*.orig
+*.rej
+
+# Container build cache
+.buildah/
+.podman/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Distribution archives
+*.tar.gz
+*.zip
+release/
+
+# User-specific config
+claim-forge.toml
+config.toml
+
+# Claim files (if testing locally)
+# Remove the following if you want to track claim files
+# CLAIM.md
+# *.sig
+# *.ots

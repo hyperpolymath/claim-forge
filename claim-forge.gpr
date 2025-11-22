@@ -1,0 +1,62 @@
+-- Claim Forge - GNAT Project File
+-- IP registration and timestamping system
+
+project Claim_Forge is
+
+   type Build_Mode_Type is ("debug", "release");
+   Build_Mode : Build_Mode_Type := external ("BUILD_MODE", "release");
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+   for Main use ("claim_forge.adb");
+
+   for Create_Missing_Dirs use "True";
+
+   package Compiler is
+      case Build_Mode is
+         when "debug" =>
+            for Switches ("Ada") use (
+               "-g",           -- Debug information
+               "-gnat2012",    -- Ada 2012 mode
+               "-gnata",       -- Enable assertions
+               "-gnatwa",      -- All warnings
+               "-gnatwe",      -- Treat warnings as errors
+               "-gnaty",       -- Style checks
+               "-gnatyyBcdefhiklmnprstux",  -- Specific style rules
+               "-fstack-check" -- Stack overflow checking
+            );
+         when "release" =>
+            for Switches ("Ada") use (
+               "-O2",          -- Optimization level 2
+               "-gnat2012",    -- Ada 2012 mode
+               "-gnatn",       -- Inline subprograms
+               "-gnatwa",      -- All warnings
+               "-fstack-check" -- Stack overflow checking
+            );
+      end case;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es");  -- Symbolic traceback
+   end Binder;
+
+   package Linker is
+      for Switches ("Ada") use ("-s");  -- Strip symbols in release
+   end Linker;
+
+   package Builder is
+      for Executable ("claim_forge.adb") use "claim-forge";
+      for Switches ("Ada") use ("-j0");  -- Use all cores
+   end Builder;
+
+   package Pretty_Printer is
+      for Default_Switches ("Ada") use (
+         "--indentation=3",
+         "--max-line-length=100",
+         "--no-separate-is",
+         "--no-separate-loop-then"
+      );
+   end Pretty_Printer;
+
+end Claim_Forge;

@@ -1,0 +1,136 @@
+# Claim Forge - GitLab CI/CD Pipeline
+# Automated build, test, and deployment
+
+stages:
+  - build
+  - test
+  - package
+  - deploy
+
+variables:
+  GIT_STRATEGY: clone
+  BUILD_MODE: release
+
+# Build job - compiles the Ada application
+build:
+  stage: build
+  image: fedora:latest
+  before_script:
+    - dnf update -y
+    - dnf install -y gcc-gnat gprbuild make
+  script:
+    - echo "Building Claim Forge..."
+    - make clean
+    - make BUILD_MODE=${BUILD_MODE}
+    - ls -lh bin/
+  artifacts:
+    paths:
+      - bin/claim-forge
+      - obj/
+    expire_in: 1 week
+  tags:
+    - docker
+
+# Test job - runs test suite
+test:
+  stage: test
+  image: fedora:latest
+  before_script:
+    - dnf update -y
+    - dnf install -y gcc-gnat gprbuild make git gnupg2
+  script:
+    - echo "Running tests..."
+    - ./bin/claim-forge --help || true
+    - echo "Test suite placeholder - to be implemented"
+  dependencies:
+    - build
+  tags:
+    - docker
+
+# Syntax check job
+syntax_check:
+  stage: build
+  image: fedora:latest
+  before_script:
+    - dnf update -y
+    - dnf install -y gcc-gnat gprbuild
+  script:
+    - echo "Checking Ada syntax..."
+    - gnatcheck -P claim-forge.gpr || true
+  allow_failure: true
+  tags:
+    - docker
+
+# Container build job
+build_container:
+  stage: package
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - echo "Building container image..."
+    - docker build -t claim-forge:${CI_COMMIT_SHORT_SHA} -f Containerfile .
+    - docker tag claim-forge:${CI_COMMIT_SHORT_SHA} claim-forge:latest
+    - docker images | grep claim-forge
+  only:
+    - main
+    - tags
+  tags:
+    - docker
+
+# Release job - creates release artifacts
+release:
+  stage: deploy
+  image: fedora:latest
+  script:
+    - echo "Creating release artifacts..."
+    - mkdir -p release
+    - cp bin/claim-forge release/
+    - cp README.md release/ || true
+    - cp CLAUDE.md release/
+    - tar -czf claim-forge-${CI_COMMIT_TAG:-${CI_COMMIT_SHORT_SHA}}.tar.gz release/
+  artifacts:
+    paths:
+      - claim-forge-*.tar.gz
+    expire_in: never
+  only:
+    - tags
+  dependencies:
+    - build
+  tags:
+    - docker
+
+# Deployment to production
+deploy_production:
+  stage: deploy
+  image: fedora:latest
+  before_script:
+    - dnf install -y rsync openssh-clients
+  script:
+    - echo "Deploying to production..."
+    - echo "Note: Configure SSH keys and deployment targets"
+    # - rsync -avz bin/claim-forge user@server:/opt/claim-forge/
+  environment:
+    name: production
+    url: https://claim-forge.example.com
+  only:
+    - tags
+  when: manual
+  dependencies:
+    - build
+  tags:
+    - docker
+
+# Code quality check
+code_quality:
+  stage: test
+  image: fedora:latest
+  before_script:
+    - dnf install -y gcc-gnat gprbuild
+  script:
+    - echo "Running code quality checks..."
+    - gnatcheck -P claim-forge.gpr || true
+    - echo "Code metrics placeholder"
+  allow_failure: true
+  tags:
+    - docker
