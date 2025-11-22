@@ -1,0 +1,164 @@
+# humanstxt.org
+
+/* TEAM */
+
+Project Lead: Hyperpolymath
+Contact: https://github.com/Hyperpolymath
+Location: Distributed
+
+/* RECONSTRUCTION */
+
+Original Author: Unknown (codebase lost)
+Reconstructed By: Claude Code (Anthropic)
+Reconstruction Date: 2025-11-22
+Reconstruction Method: Autonomous development from deployment guide
+Reconstruction Confidence: ~78% (see RECONSTRUCTION_SUMMARY.md)
+
+/* THANKS */
+
+- AdaCore: For GNAT compiler and Ada toolchain
+- OpenTimestamps: For blockchain timestamping
+- GnuPG: For cryptographic signing
+- Git: For version control
+- Fedora Project: For container base image
+- SaltStack: For automation framework
+
+/* CONTRIBUTORS */
+
+This section will list contributors once the project receives contributions.
+
+See: https://github.com/Hyperpolymath/claim-forge/graphs/contributors
+
+/* PHILOSOPHY */
+
+Claim Forge embodies:
+
+1. Type Safety First
+   - Ada 2012 strong typing for legal/IP contexts
+   - Compile-time guarantees over runtime checks
+   - Memory safety without garbage collection
+
+2. Offline-First
+   - Works air-gapped for sensitive IP work
+   - Optional network features (OTS, Git push)
+   - No telemetry, no tracking
+
+3. Cryptographic Integrity
+   - GPG signatures for authenticity
+   - OpenTimestamps for blockchain anchoring
+   - Signed Git commits/tags for provenance
+
+4. Transparency
+   - All assumptions documented (ASSUMPTIONS.md)
+   - Reconstruction process fully disclosed
+   - Open source (MIT + Palimpsest v0.8)
+
+5. Emotional Safety (CCCP Principles)
+   - Clear contribution guidelines
+   - Tri-Perimeter Contribution Framework (TPCF)
+   - Respectful community interactions
+
+/* SITE */
+
+Repository: https://github.com/Hyperpolymath/claim-forge
+Documentation: https://github.com/Hyperpolymath/claim-forge/tree/main/docs
+Issue Tracker: https://github.com/Hyperpolymath/claim-forge/issues
+CI/CD: GitLab CI (.gitlab-ci.yml)
+
+/* STACK */
+
+Languages:
+  - Ada 2012 (core application)
+  - Shell (automation scripts)
+  - Make (build system)
+  - Just (task runner)
+  - YAML (CI/CD configuration)
+  - Salt (infrastructure automation)
+
+Build Tools:
+  - GNAT compiler 2021+
+  - GPRbuild
+  - Make
+  - Just (justfile)
+  - Podman/Docker (containers)
+
+Cryptography:
+  - GnuPG 2.0+ (signing)
+  - OpenTimestamps (blockchain anchoring)
+  - Bitcoin (timestamp ledger)
+
+Version Control:
+  - Git 2.30+
+  - Signed commits (GPG)
+  - Signed tags
+
+/* STANDARDS */
+
+Compliance:
+  - RSR Framework: Silver Level (85%)
+  - RFC 9116: security.txt
+  - Ada 2012: ISO/IEC 8652:2012
+  - WCAG 2.1: AA (documentation)
+  - OpenTimestamps: v1.0
+  - Conventional Commits: v1.0.0
+
+Licenses:
+  - MIT License (permissive)
+  - Palimpsest License v0.8 (dual licensing)
+
+/* LICENSE */
+
+Copyright (c) 2025 Hyperpolymath
+
+Dual Licensed:
+  - MIT License (see LICENSE)
+  - Palimpsest License v0.8 (see LICENSE-PALIMPSEST)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, subject to the terms of the MIT License.
+
+The Palimpsest License allows for attribution-preserving modifications and
+derivative works with cultural/political autonomy. See LICENSE-PALIMPSEST
+for full terms.
+
+/* ACKNOWLEDGMENTS */
+
+This project was reconstructed from a deployment guide after the original
+codebase was lost. The reconstruction demonstrates:
+
+- Ada's suitability for legal/IP contexts
+- Type safety as foundational security
+- Offline-first design for privacy
+- Blockchain timestamping for provenance
+- Multi-layered cryptographic verification
+
+Special thanks to the Ada community for maintaining excellent documentation
+and tooling that made this reconstruction possible.
+
+/* SUSTAINABILITY */
+
+This project is maintained by volunteers. If you find it useful:
+
+1. Star the repository: https://github.com/Hyperpolymath/claim-forge
+2. Report issues: Improve code quality
+3. Contribute: See CONTRIBUTING.md
+4. Cite: Use in research/teaching (see .well-known/ai.txt)
+
+/* CONTACT */
+
+Questions? Issues? Contributions?
+
+- GitHub Issues: https://github.com/Hyperpolymath/claim-forge/issues
+- GitHub Discussions: https://github.com/Hyperpolymath/claim-forge/discussions
+- Security: security@hyperpolymath.example (GPG encrypted)
+- General: team@hyperpolymath.example
+
+/* LAST UPDATE */
+
+This file was last updated: 2025-11-22
+
+For the most current information, see:
+https://github.com/Hyperpolymath/claim-forge

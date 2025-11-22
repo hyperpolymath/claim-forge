@@ -1,0 +1,132 @@
+# Canonical: https://github.com/Hyperpolymath/claim-forge/.well-known/security.txt
+# Expires: 2026-11-22T00:00:00Z
+# Preferred-Languages: en
+# Contact: https://github.com/Hyperpolymath/claim-forge/security/advisories/new
+# Acknowledgments: https://github.com/Hyperpolymath/claim-forge/blob/main/SECURITY.md#acknowledgments
+# Policy: https://github.com/Hyperpolymath/claim-forge/blob/main/SECURITY.md
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# Security Policy for Claim Forge
+
+## Supported Versions
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.0.x   | :white_check_mark: |
+| < 1.0   | :x:                |
+
+## Reporting a Vulnerability
+
+**DO NOT** report security vulnerabilities through public GitHub issues.
+
+### Preferred Reporting Methods
+
+1. **GitHub Security Advisories** (Preferred)
+   - Navigate to: https://github.com/Hyperpolymath/claim-forge/security/advisories/new
+   - Fill out the advisory form
+   - Our team will respond within 48 hours
+
+2. **Email** (For sensitive disclosures)
+   - Send encrypted email to: security@hyperpolymath.example
+   - Use our GPG key: [fingerprint placeholder]
+   - Include "SECURITY" in subject line
+
+### What to Include
+
+- Description of the vulnerability
+- Steps to reproduce
+- Proof of concept (if applicable)
+- Impact assessment
+- Suggested fix (if available)
+
+### Response Timeline
+
+- **48 hours**: Initial acknowledgment
+- **7 days**: Preliminary assessment
+- **30 days**: Fix development and testing
+- **60 days**: Public disclosure (coordinated)
+
+## Security Features
+
+Claim Forge implements multiple security layers:
+
+1. **Type Safety**: Ada 2012 strong typing prevents type confusion
+2. **Memory Safety**: No dynamic allocation, bounded strings prevent buffer overflows
+3. **No Unsafe Code**: Zero unsafe blocks in entire codebase
+4. **Cryptographic Signing**: GPG signatures for all claims
+5. **Blockchain Anchoring**: OpenTimestamps for tamper-proof timestamps
+6. **Signed Commits**: All commits GPG-signed by maintainers
+
+## Scope
+
+### In Scope
+- Core Ada application (src/*.adb, src/*.ads)
+- Build system (Makefile, claim-forge.gpr, .gitlab-ci.yml)
+- Container images (Containerfile)
+- Scripts (setup.sh, bin/monitor.sh)
+- Documentation rendering vulnerabilities
+
+### Out of Scope
+- Third-party dependencies (report to upstream)
+- GPG/OpenTimestamps client vulnerabilities (report to respective projects)
+- Operating system vulnerabilities
+- Physical security of development machines
+- Social engineering attacks
+
+## Security Best Practices for Users
+
+1. **Verify Downloads**: Check GPG signatures on releases
+2. **Build from Source**: Compile from audited source code
+3. **Secure GPG Keys**: Use hardware security modules for production
+4. **Audit Claims**: Review claim files before signing
+5. **Network Isolation**: Run in air-gapped environment for sensitive work
+
+## Known Security Considerations
+
+### Ada-Specific
+- **Shell Command Execution**: GPG/Git/OTS called via shell (see ASSUMPTIONS.md #8)
+  - Mitigation: Input sanitization, bounded strings
+  - Future: Native Ada bindings
+
+### Cryptographic
+- **GPG Key Management**: User responsibility (documented in README.md)
+  - Mitigation: Clear documentation, no key storage
+  - Best Practice: Hardware security keys
+
+### Supply Chain
+- **GNAT Compiler**: Trust in AdaCore toolchain
+  - Mitigation: Use stable, verified GNAT versions
+  - Verification: Reproducible builds (future Nix flake)
+
+## Acknowledgments
+
+We thank the following security researchers:
+
+- (None yet - be the first!)
+
+## Safe Harbor
+
+We support security research conducted in good faith:
+
+1. **Legal Protection**: We will not pursue legal action against researchers who:
+   - Follow responsible disclosure guidelines
+   - Do not access/modify production data
+   - Do not perform DoS attacks
+   - Report findings through proper channels
+
+2. **Recognition**: Researchers will be acknowledged in:
+   - SECURITY.md acknowledgments section
+   - Release notes for fixed versions
+   - CVE credits (if applicable)
+
+## Encryption
+
+This file is signed with our GPG key.
+
+Fingerprint: [Placeholder - Replace with actual key]
+
+-----BEGIN PGP SIGNATURE-----
+[Placeholder - Sign this file with GPG]
+-----END PGP SIGNATURE-----

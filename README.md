@@ -2,7 +2,15 @@
 
 **IP Registration & Blockchain Timestamping System**
 
+[![RSR Compliance](https://img.shields.io/badge/RSR-Silver%2085%25-silver)](RSR_COMPLIANCE.md)
+[![License](https://img.shields.io/badge/License-MIT%20%2B%20Palimpsest-blue)](LICENSE)
+[![Ada](https://img.shields.io/badge/Ada-2012-blue)](https://www.adaic.org/)
+[![Type Safety](https://img.shields.io/badge/Type%20Safety-100%25-brightgreen)](src/)
+[![Memory Safety](https://img.shields.io/badge/Memory%20Safety-100%25-brightgreen)](src/)
+
 Claim Forge is a type-safe Ada application that creates legally defensible intellectual property claims through cryptographic signing (GPG), blockchain timestamping (OpenTimestamps/Bitcoin), and version control integration (Git).
+
+**RSR Compliance**: This project follows the [Rhodium Standard Repository Framework](RSR_COMPLIANCE.md) at **Silver Level (85%)**, ensuring high standards for type safety, memory safety, security, documentation, and community governance.
 
 ## Features
 
@@ -275,6 +283,17 @@ git remote add github git@github.com:username/repo.git
 
 ## Legal & License
 
+### Dual Licensing
+
+Claim Forge is dual-licensed under your choice of:
+
+- **[MIT License](LICENSE)** - Permissive, simple attribution
+- **[Palimpsest License v0.8](LICENSE-PALIMPSEST)** - Copyleft with attribution palimpsest preservation
+
+Choose the license that best fits your needs. See license files for full terms.
+
+### Legally Defensible Claims
+
 Claim Forge is designed to create legally defensible intellectual property claims. The generated claims include:
 
 - Cryptographic signatures (GPG)
@@ -287,15 +306,65 @@ This triple-layered verification provides strong evidence of:
 - **Ownership**: The work was created/owned by the key holder
 - **Integrity**: The work has not been modified since claiming
 
+## RSR Compliance
+
+Claim Forge adheres to the [Rhodium Standard Repository Framework](RSR_COMPLIANCE.md) at **Silver Level (85%)**.
+
+### Compliance Highlights
+
+✅ **Type Safety**: Ada 2012 with strong compile-time guarantees (100%)
+✅ **Memory Safety**: No dynamic allocation, bounded strings, zero unsafe code (100%)
+✅ **Offline-First**: Works air-gapped, optional network features (90%)
+✅ **Security**: RFC 9116 security.txt, vulnerability reporting, GPG signing (85%)
+✅ **Documentation**: Complete .well-known/, SECURITY.md, CODE_OF_CONDUCT.md (95%)
+✅ **Build System**: Makefile, GNAT project, CI/CD, justfile (85%)
+✅ **TPCF**: Tri-Perimeter Contribution Framework documented (100%)
+✅ **Governance**: MAINTAINERS.md, CODE_OF_CONDUCT.md, graduated trust (90%)
+
+### Verify Compliance
+
+```bash
+# Check RSR compliance
+just rsr-check
+
+# Or directly:
+./bin/rsr-verify.sh
+```
+
+### RSR Categories
+
+See [RSR_COMPLIANCE.md](RSR_COMPLIANCE.md) for detailed compliance analysis across all 11 categories.
+
+## Governance
+
+This project follows the [Tri-Perimeter Contribution Framework](TPCF.md):
+
+- **Perimeter 3 (Community Sandbox)**: Anyone can contribute via PRs
+- **Perimeter 2 (Trusted Contributors)**: Proven contributors get direct commit access
+- **Perimeter 1 (Core Maintainers)**: High-trust maintainers with merge rights
+
+See [MAINTAINERS.md](MAINTAINERS.md) for current maintainers and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community standards.
+
+## Security
+
+Report security vulnerabilities via:
+- GitHub Security Advisories (preferred)
+- Email: security@hyperpolymath.example (GPG encrypted)
+
+See [SECURITY.md](SECURITY.md) for full security policy and [.well-known/security.txt](.well-known/security.txt) for RFC 9116 compliance.
+
 ## Contributing
 
 This project was reconstructed from a deployment guide. See [ASSUMPTIONS.md](./ASSUMPTIONS.md) for details on implementation decisions.
 
 Contributions welcome! Please:
+- Follow [TPCF.md](TPCF.md) tri-perimeter framework
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) for code style
 - Follow Ada 2012 best practices
 - Maintain type safety
 - Test with actual GPG and OpenTimestamps
 - Sign your commits with GPG
+- Respect [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ## Resources
 

@@ -1,0 +1,324 @@
+# Palimpsest License v0.8
+
+## Preamble
+
+The Palimpsest License is a copyleft license designed for **politically autonomous software** - software that preserves cultural, political, and ethical context across modifications. Named after manuscripts where older text remains visible beneath newer writing, this license ensures that attribution and modification history are preserved through the software's evolution.
+
+**Core Principle**: You may modify this work, but you must preserve the attribution palimpsest - the visible layering of who created what.
+
+---
+
+## License Terms
+
+Copyright © 2025 Hyperpolymath
+Project: Claim Forge
+URL: https://github.com/Hyperpolymath/claim-forge
+
+### 1. Definitions
+
+- **"Original Work"**: The software, documentation, and associated materials as created by the Original Author.
+- **"Modified Work"**: Any derivative, adaptation, translation, or transformation of the Original Work.
+- **"Attribution Palimpsest"**: The cumulative record of all authors, modifications, and contexts through the software's lineage.
+- **"Political Context"**: The cultural, ethical, or ideological framework in which the software was created or modified.
+- **"Commercially Use"**: To use the software in exchange for monetary compensation or commercial advantage.
+
+### 2. Grant of Rights
+
+Subject to the terms of this license, you are granted the following rights:
+
+#### 2.1 Use
+- You may use the Original Work for any purpose, including commercial purposes.
+- You may deploy the Original Work in production environments.
+- You may study and learn from the Original Work.
+
+#### 2.2 Modification
+- You may modify the Original Work to create Modified Works.
+- You may adapt the Original Work for different contexts, platforms, or purposes.
+- You may translate the Original Work into other programming languages.
+
+#### 2.3 Distribution
+- You may distribute copies of the Original Work.
+- You may distribute Modified Works.
+- Distribution may be commercial or non-commercial.
+
+### 3. Conditions
+
+All rights granted above are subject to these conditions:
+
+#### 3.1 Attribution Palimpsest Preservation
+
+When distributing the Original Work or Modified Works, you MUST:
+
+1. **Preserve Original Attribution**
+   - Include the Original Author's name and contact information
+   - Maintain the original copyright notice
+   - Preserve the original project URL
+
+2. **Add Your Own Layer**
+   - Add your own attribution (name, contact, modification date)
+   - Document what you changed and why
+   - Provide a URL to your Modified Work (if publicly available)
+
+3. **Maintain the Palimpsest**
+   - Keep all previous attribution layers visible
+   - Do not remove or obscure prior authors' contributions
+   - Present the attribution palimpsest in a human-readable format
+
+**Format Example**:
+```
+=== ATTRIBUTION PALIMPSEST ===
+
+Layer 1 (Original Work):
+  Author: Hyperpolymath
+  Date: 2025-11-22
+  URL: https://github.com/Hyperpolymath/claim-forge
+  Description: IP registration and blockchain timestamping system
+  Context: Type-safe Ada implementation for legal defensibility
+
+Layer 2 (First Modification):
+  Author: [Your Name]
+  Date: [Modification Date]
+  URL: [Your Fork URL]
+  Description: [What you changed]
+  Context: [Why you changed it, your perspective]
+
+[Additional layers as modifications continue...]
+```
+
+#### 3.2 Political Context Preservation
+
+When creating a Modified Work, you MUST:
+
+1. **Document Your Context**
+   - State your political, cultural, or ethical perspective if it differs from the original
+   - Explain how your perspective influenced modifications
+   - Respect that software embodies values (transparency, privacy, accessibility, etc.)
+
+2. **Allow Forking Disagreements**
+   - If you fundamentally disagree with the Original Author's values, fork with attribution
+   - Document your disagreement respectfully in the palimpsest
+   - Allow the community to choose which version aligns with their values
+
+**Example**:
+```
+Original Context: Built for offline-first privacy and air-gapped use
+Modified Context: Adapted for cloud-native deployment with telemetry
+Divergence: Original author prioritized privacy; modifier prioritizes convenience
+```
+
+#### 3.3 Copyleft Requirement
+
+Modified Works must be licensed under:
+- The Palimpsest License v0.8 (this license), **OR**
+- A later version of the Palimpsest License, **OR**
+- A compatible copyleft license that preserves attribution (e.g., GPL v3+, AGPL v3+)
+
+You MAY NOT relicense under permissive licenses (MIT, BSD, Apache) as they do not preserve the attribution palimpsest.
+
+#### 3.4 Source Code Availability
+
+When distributing Modified Works, you MUST:
+
+1. **Provide Source Code**
+   - Make source code available to recipients
+   - Use a publicly accessible version control repository (Git, Mercurial, etc.)
+   - Include build instructions and dependencies
+
+2. **Document Changes**
+   - Use version control commit messages to document changes
+   - Maintain a CHANGELOG.md file
+   - Clearly mark modified files
+
+#### 3.5 No Additional Restrictions
+
+You MAY NOT impose additional restrictions on recipients' rights beyond those in this license.
+
+You MAY NOT use technical measures (DRM, encryption, obfuscation) to prevent recipients from exercising their rights.
+
+### 4. Commercial Use
+
+Commercial use is explicitly permitted, with these additional requirements:
+
+#### 4.1 Commercial Attribution
+
+If using commercially, you MUST:
+- Display attribution palimpsest in user-facing documentation
+- Include attribution in "About" or "Credits" section of software
+- Provide link to original project in marketing materials (if derivative)
+
+#### 4.2 Contribution Reciprocity (Optional but Encouraged)
+
+Commercial users are encouraged (but not required) to:
+- Contribute improvements back to the original project
+- Sponsor original authors financially
+- Provide commercial support to the open-source community
+
+### 5. Patent Grant
+
+Each contributor grants you a perpetual, worldwide, non-exclusive, royalty-free patent license to:
+- Use, make, sell, and import the Original Work or Modified Works
+- Practice any patent claims that would be infringed by their contributions
+
+**Patent Retaliation**: If you initiate patent litigation against any entity alleging that the Original Work or Modified Works constitute patent infringement, your patent license terminates as of the date such litigation is filed.
+
+### 6. Disclaimer of Warranty
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.**
+
+The Original Work and Modified Works are provided without warranty of any kind, express or implied, including but not limited to:
+- Merchantability
+- Fitness for a particular purpose
+- Non-infringement
+- Accuracy
+- Reliability
+
+**Your use of this software is at your own risk.**
+
+### 7. Limitation of Liability
+
+**IN NO EVENT SHALL ANY AUTHOR BE LIABLE FOR ANY DAMAGES.**
+
+To the fullest extent permitted by law, in no event shall any author or contributor be liable for any claim, damages, or other liability, whether in action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+
+This includes, without limitation:
+- Direct, indirect, incidental, or consequential damages
+- Loss of profits, data, or business
+- Personal injury or property damage
+
+### 8. Termination
+
+#### 8.1 Automatic Termination
+
+Your rights under this license terminate automatically if you:
+- Fail to comply with the attribution palimpsest requirement
+- Remove or obscure previous authors' attributions
+- Violate the copyleft requirement (relicense under permissive license)
+- Initiate patent litigation (see Section 5)
+
+#### 8.2 Reinstatement
+
+If your rights terminate due to non-compliance:
+1. Rights are automatically reinstated if you cure the violation within 30 days
+2. Rights are permanently reinstated if the copyright holder explicitly reinstates them
+3. Reinstatement does not affect any claims for damages from the violation
+
+### 9. Compatibility with Other Licenses
+
+#### 9.1 GPL Compatibility
+
+This license is designed to be compatible with:
+- GNU General Public License v3.0 or later (GPL-3.0+)
+- GNU Affero General Public License v3.0 or later (AGPL-3.0+)
+
+You may combine Palimpsest-licensed code with GPL/AGPL code, and the result may be licensed under GPL/AGPL, provided you preserve the attribution palimpsest as documentation.
+
+#### 9.2 MIT/Apache Compatibility (Incoming Only)
+
+You may incorporate MIT or Apache-licensed code into a Palimpsest-licensed project.
+
+You MAY NOT relicense Palimpsest code under MIT/Apache (outgoing incompatibility).
+
+### 10. Dual Licensing
+
+Claim Forge is dual-licensed under:
+- **MIT License** (permissive, attribution required)
+- **Palimpsest License v0.8** (copyleft, attribution palimpsest required)
+
+**You may choose either license** for your use:
+- Choose MIT if you prefer permissive licensing and simpler attribution
+- Choose Palimpsest if you want copyleft and value preserving modification context
+
+**If you create a Modified Work**, you must comply with the license you chose. If you choose Palimpsest, your Modified Work must also be dual-licensed or Palimpsest-only.
+
+### 11. Future Versions
+
+The Palimpsest License may be updated to new versions. You may:
+- Use the Original Work under this version (v0.8), OR
+- Use the Original Work under any later version, OR
+- Use the Original Work under "v0.8 or later" (recommended)
+
+New versions will be published at: https://github.com/Hyperpolymath/palimpsest-license
+
+### 12. Entire Agreement
+
+This license constitutes the entire agreement between you and the copyright holders regarding the use of the Original Work.
+
+---
+
+## How to Apply This License
+
+To apply the Palimpsest License to your software:
+
+1. **Add License Text**: Include this license file as `LICENSE-PALIMPSEST`
+2. **Add Copyright Notice**: In each source file:
+   ```ada
+   -- Copyright (C) 2025 [Your Name]
+   -- Licensed under Palimpsest License v0.8
+   -- See LICENSE-PALIMPSEST for full terms
+   ```
+3. **Create Attribution Palimpsest**: Add `ATTRIBUTION.md` with:
+   ```markdown
+   # Attribution Palimpsest
+
+   ## Layer 1 (Original)
+   - Author: [Your Name]
+   - Date: [Creation Date]
+   - Description: [What this software does]
+   - Context: [Your values/perspective]
+   ```
+4. **Declare License**: In README.md:
+   ```markdown
+   ## License
+
+   This project is licensed under the Palimpsest License v0.8.
+   See LICENSE-PALIMPSEST for details.
+   ```
+
+---
+
+## Philosophical Foundation
+
+The Palimpsest License embodies:
+
+1. **Attribution Archaeology**: Software has a history; preserve it
+2. **Political Autonomy**: Software embodies values; make them explicit
+3. **Reversible Evolution**: Forks are not failures; they're cultural divergence
+4. **Copyleft with Context**: Not just source code, but source *meaning*
+5. **Commercial Coexistence**: Commerce is fine; extraction is not
+
+---
+
+## FAQs
+
+**Q: How is this different from GPL?**
+A: GPL requires source code sharing. Palimpsest additionally requires preserving the *attribution palimpsest* and *political context*.
+
+**Q: Can I use this commercially?**
+A: Yes! Commercial use is explicitly permitted. Just preserve attribution.
+
+**Q: What if I disagree with the original author's politics?**
+A: Fork it! Document your disagreement in the attribution palimpsest. The community can choose which version aligns with their values.
+
+**Q: Is this OSI-approved?**
+A: Not yet. Palimpsest License v0.8 is experimental. We may submit for OSI approval in future versions.
+
+**Q: Can I relicense under MIT?**
+A: No (outgoing incompatibility). But you can dual-license like Claim Forge does.
+
+---
+
+## Version History
+
+- **v0.8** (2025-11-22): Initial public release
+  - Core attribution palimpsest requirement
+  - Political context preservation
+  - GPL compatibility
+  - Patent grant
+  - Dual licensing support
+
+---
+
+*Palimpsest License v0.8*
+*Published: 2025-11-22*
+*Maintainer: Hyperpolymath*
+*URL: https://github.com/Hyperpolymath/palimpsest-license*
