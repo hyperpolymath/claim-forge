@@ -1,81 +1,79 @@
-# Claim Forge - Git Ignore File
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# RSR-compliant .gitignore
 
-# Ada build artifacts
-obj/
-bin/claim-forge
-*.o
-*.ali
-*.a
-*.so
-b~*.ad[sb]
-b__*.ad[sb]
-
-# GNAT project build files
-*.lexch
-*.cswi
-
-# Backup files
-*.bak
-*~
-.#*
-\#*#
-
-# Editor files
-*.swp
-*.swo
-.vscode/
-.idea/
-*.sublime-*
-
-# OS files
+# OS & Editor
 .DS_Store
 Thumbs.db
-desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Build
+/target/
+/_build/
+/build/
+/dist/
+/out/
+
+# Dependencies
+/node_modules/
+/vendor/
+/deps/
+/.elixir_ls/
+
+# Rust
+# Cargo.lock  # Keep for binaries
+
+# Elixir
+/cover/
+/doc/
+*.ez
+erl_crash.dump
+
+# Julia
+*.jl.cov
+*.jl.mem
+/Manifest.toml
+
+# ReScript
+/lib/bs/
+/.bsb.lock
+
+# Python (SaltStack only)
+__pycache__/
+*.py[cod]
+.venv/
+
+# Ada/SPARK
+*.ali
+/obj/
+/bin/
+
+# Haskell
+/.stack-work/
+/dist-newstyle/
+
+# Chapel
+*.chpl.tmp.*
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# Test/Coverage
+/coverage/
+htmlcov/
 
 # Logs
 *.log
-/var/log/
+/logs/
 
-# Test artifacts
-test-*.md
-*.ots.bak
-CLAIM.md.test
-
-# Temporary files
-tmp/
-temp/
+# Temp
+/tmp/
 *.tmp
-
-# GPG files (never commit these!)
-*.gpg
-*.asc
-gpg-*-backup.*
-
-# Git files
-*.orig
-*.rej
-
-# Container build cache
-.buildah/
-.podman/
-
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-.pytest_cache/
-
-# Distribution archives
-*.tar.gz
-*.zip
-release/
-
-# User-specific config
-claim-forge.toml
-config.toml
-
-# Claim files (if testing locally)
-# Remove the following if you want to track claim files
-# CLAIM.md
-# *.sig
-# *.ots
+*.bak
