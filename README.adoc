@@ -1,6 +1,9 @@
 = Claim Forge
+image:https://img.shields.io/badge/license-PMPL--1.0-blue.svg[License,link="https://github.com/hyperpolymath/palimpsest-license"]
 
-image:https://img.shields.io/badge/License-MPL_2.0-blue.svg[MPL-2.0,link="https://opensource.org/licenses/MPL-2.0"]
+
+
+
 image:https://img.shields.io/badge/Philosophy-Palimpsest-purple.svg[Palimpsest,link="https://github.com/hyperpolymath/palimpsest-licence"]
 
 
@@ -305,7 +308,7 @@ git remote add github git@github.com:username/repo.git
 
 Claim Forge is dual-licensed under your choice of:
 
-- *[MIT License](LICENSE)* - Permissive, simple attribution
+- *[Palimpsest-MPL License v1.0 (PMPL-1.0)](LICENSE)* - Permissive, simple attribution
 - *[Palimpsest License v0.8](LICENSE-PALIMPSEST)* - Copyleft with attribution palimpsest preservation
 
 Choose the license that best fits your needs. See license files for full terms.
