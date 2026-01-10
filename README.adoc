@@ -305,7 +305,7 @@ git remote add github git@github.com:username/repo.git
 
 Claim Forge is dual-licensed under your choice of:
 
-- *[MIT License](LICENSE)* - Permissive, simple attribution
+- *[Palimpsest-MPL-1.0 License](LICENSE)* - Permissive, simple attribution
 - *[Palimpsest License v0.8](LICENSE-PALIMPSEST)* - Copyleft with attribution palimpsest preservation
 
 Choose the license that best fits your needs. See license files for full terms.
